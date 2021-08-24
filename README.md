@@ -15,11 +15,11 @@ This section contains information regarding the database that was developed as p
 Database Table Structure:<br /><br />
 
 Product<br />
-	productID<br />
-	productName<br />
-	Image<br />
-	shortDescription<br />
-	longDescription<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productID<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productName<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shortDescription<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;longDescription<br />
 	Price <br />
 	<br /><br />
 User<br />
