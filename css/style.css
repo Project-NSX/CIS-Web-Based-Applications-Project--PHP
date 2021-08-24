@@ -1,0 +1,91 @@
+.confirmed-img
+{
+	width: 100px;
+
+}
+.navbar {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.main-body {
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer-bar {
+	background-color: lightgrey;
+}
+
+.product {
+	padding: 25px;
+
+	align-items: center;
+	text-align: center;
+}
+.img {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+}
+.img-thumb {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+
+	height: 250px;
+	max-width: 250px;
+}
+.button {
+	padding: 5px;
+}
+#welcome {
+	text-align: center;
+}
+
+.chart div 
+{
+    font: 10px sans-serif;
+    background-color: steelblue;
+    text-align: right;
+    padding: 3px;
+    margin: 1px;
+    color: white;
+}
+
+/*
+https://jonathannicol.com/blog/2014/06/16/centre-crop-thumbnails-with-css/
+The below CSS is WIP for effective thumbnails generated from pictures
+*/
+
+/* 
+.thumbnail {
+
+	position: relative;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+
+}
+.thumbnail img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 100%;
+	width: auto;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.thumbnail img.portrait {
+	width: 100%;
+	height: auto;
+} 
+*/
