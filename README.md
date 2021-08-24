@@ -20,19 +20,19 @@ Product<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shortDescription<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;longDescription<br />
-	Price <br />
-	<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
 User<br />
-	userID<br />
-	fName<br />
-	lName<br />
-	Email<br />
-	Password<br />
-	deliveryAddress<br />
-	billingAddress<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userID<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fName<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lName<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deliveryAddress<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;billingAddress<br /><br />
 	
 Order<br />
-	orderID<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderID<br />
 	orderDate<br />
 	userID (FK REFERENCES User(userID))<br /><br />
 	
@@ -49,43 +49,43 @@ Options for payment method:
 #### Create Tables
 CREATE TABLE Product<br />
 (<br />
-	productID INT UNSIGNED NOT NULL AUTO_INCREMENT, <br />
-	productName VARCHAR (128),<br />
-	image BLOB, <br />
-	description VARCHAR(128) NOT NULL,<br />
-	PRIMARY KEY (productID)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productID INT UNSIGNED NOT NULL AUTO_INCREMENT, <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productName VARCHAR (128),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image BLOB, <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description VARCHAR(128) NOT NULL,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRIMARY KEY (productID)<br />
 );<br />
 
 CREATE TABLE Customer<br />
 (<br />
-	customerID INT UNSIGNED NOT NULL AUTO_INCREMENT,<br />
-    fName VARCHAR(128),<br />
-    lName VARCHAR(128),<br />
-    email VARCHAR(255),<br />
-    password VARCHAR(128),<br />
-    deliveryAddress VARCHAR(512),<br />
-    billingAddress VARCHAR(512),<br />
-    PRIMARY KEY (customerID)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;customerID INT UNSIGNED NOT NULL AUTO_INCREMENT,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fName VARCHAR(128),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lName VARCHAR(128),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email VARCHAR(255),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;password VARCHAR(128),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deliveryAddress VARCHAR(512),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;billingAddress VARCHAR(512),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRIMARY KEY (customerID)<br />
 );<br /><br />
 
 CREATE TABLE CustomerOrder<br />
 (<br />
-	orderID INT UNSIGNED NOT NULL AUTO_INCREMENT, <br />
-    orderDate DATETIME,<br />
-	PRIMARY KEY (orderID)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderID INT UNSIGNED NOT NULL AUTO_INCREMENT, <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderDate DATETIME,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRIMARY KEY (orderID)<br />
 );<br /><br />
 
 CREATE TABLE ProductOrder<br />
 (<br />
-	productID INT UNSIGNED NOT NULL,<br />
-	orderID INT UNSIGNED NOT NULL, <br />
-	PRIMARY KEY (productID, orderID),<br />
-	FOREIGN KEY (productID)<br />
-		REFERENCES Product(productID)<br />
-		ON DELETE RESTRICT ON UPDATE CASCADE,<br />
-	FOREIGN KEY (orderID)<br />
-		REFERENCES CustomerOrder(orderID)<br />
-		ON DELETE CASCADE ON UPDATE CASCADE<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productID INT UNSIGNED NOT NULL,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderID INT UNSIGNED NOT NULL, <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRIMARY KEY (productID, orderID),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FOREIGN KEY (productID)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REFERENCES Product(productID)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON DELETE RESTRICT ON UPDATE CASCADE,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FOREIGN KEY (orderID)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REFERENCES CustomerOrder(orderID)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON DELETE CASCADE ON UPDATE CASCADE<br />
 );
 
 #### Inserting Test Data
@@ -93,28 +93,28 @@ INSERT INTO customer <br />
 (fName, lName, eMail, password, deliveryAddress, billingAddress)<br />
 VALUES<br />
 (<br />
-	"Charlie", <br />
-    "Francis", <br />
-    "CFrancis@gmail.com", <br />
-    "charliepass", <br />
-    "10 Charlie's street, Charlietown, RH55 6BB",<br />
-    "10 Charlie's street, Charlietown, RH55 6BB"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Charlie", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Francis", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"CFrancis@gmail.com", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"charliepass", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"10 Charlie's street, Charlietown, RH55 6BB",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"10 Charlie's street, Charlietown, RH55 6BB"<br />
 ),	<br />
 (<br />
-	"Walter", <br />
-    "Bishop", <br />
-    "WBishop@gmail.com", <br />
-    "walterpass", <br />
-    "Best lab in Harvard, Harvard University, FH33 6SJ",<br />
-    "Best lab in Harvard, Harvard University, FH33 6SJ"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Walter", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Bishop", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"WBishop@gmail.com", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"walterpass", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Best lab in Harvard, Harvard University, FH33 6SJ",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Best lab in Harvard, Harvard University, FH33 6SJ"<br />
 ),<br />
 (<br />
-	"Peter", <br />
-    "Bishop", <br />
-    "ThisIsMyShow@BestGuyEver.com", <br />
-    "veryimportantperson101", <br />
-    "Best lab in Harvard, Harvard University, FH33 6SJ",<br />
-    "Best lab in Harvard, Harvard University, FH33 6SJ"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Peter", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Bishop", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"ThisIsMyShow@BestGuyEver.com", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"veryimportantperson101", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Best lab in Harvard, Harvard University, FH33 6SJ",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Best lab in Harvard, Harvard University, FH33 6SJ"<br />
 );<br /><br />
 
 
@@ -122,22 +122,22 @@ INSERT INTO product <br />
 (productName, description)<br />
 VALUES<br />
 (<br />
-	"Chamoizon Basics Ladder", <br />
-    "Chamizon Basics Ladder is a basic ladder that should probably get the job done. Suitable for light work or it might break."<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Chamoizon Basics Ladder", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Chamizon Basics Ladder is a basic ladder that should probably get the job done. Suitable for light work or it might break."<br />
 ),<br />
 (<br />
-	"Premium Ladder + Free Bloke", <br />
-    "Premium ladder made of high quality stainless steel. Suitable for all jobs around the home such as cleaning windows. Strong but lightweight, as is the bloke that comes with the ladder. The bloke provided can clean up to 300 windows an hour, provided sufficient amounts of coffee are supplied."<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Premium Ladder + Free Bloke", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Premium ladder made of high quality stainless steel. Suitable for all jobs around the home such as cleaning windows. Strong but lightweight, as is the bloke that comes with the ladder. The bloke provided can clean up to 300 windows an hour, provided sufficient amounts of coffee are supplied."<br />
 ),<br />
 (<br />
-	"Chamoizon Chamoise Leather",<br /> 
-    "Basic Chamoise Leather thats good for cleaning windows and stuff. Should work alright as long as you don't put too much pressure on while cleaning and break the window. Bits of broken glass may have an adverse affect on product"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Chamoizon Chamoise Leather",<br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Basic Chamoise Leather thats good for cleaning windows and stuff. Should work alright as long as you don't put too much pressure on while cleaning and break the window. Bits of broken glass may have an adverse affect on product"<br />
 ),<br />
 (<br />
-	"Cheapo Telescopic Ladder", <br />
-    "Telescopic ladder that only collapses 20% of the time while in use. Please ensure you have a good amount of medical care available before using."<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cheapo Telescopic Ladder", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Telescopic ladder that only collapses 20% of the time while in use. Please ensure you have a good amount of medical care available before using."<br />
 ),<br />
 (<br />
-	"Chamoizon Basics Squeegee", <br />
-    "Basic squeegee, guarenteed to make a funny noise when cleaning your windows."<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Chamoizon Basics Squeegee", <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Basic squeegee, guarenteed to make a funny noise when cleaning your windows."<br />
 );<br />
