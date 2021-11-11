@@ -10,19 +10,27 @@ Notes about this project:
 - The "SQL-TABLES-DUMP" folder contains a backup of the SQL tables that are required for the project to run.
 - 
 ## Project Screenshots
-Below are screenshots of the final project
+Below are screenshots of the final project.
+
+### Home Page
 ![](ASSIGNMENT-FILES/Final-Screenshots/1.png?raw=true "Home Page")
 
+### Product Details Page
 ![](ASSIGNMENT-FILES/Final-Screenshots/2.png?raw=true "Product Details Page")
 
+### Shopping Basket
 ![](ASSIGNMENT-FILES/Final-Screenshots/3.png?raw=true "Shopping Basket")
 
+### Login Page
 ![](ASSIGNMENT-FILES/Final-Screenshots/4.png?raw=true "Login Page")
 
+### Checkout
 ![](ASSIGNMENT-FILES/Final-Screenshots/5.png?raw=true "Checkout")
 
-![](ASSIGNMENT-FILES/Final-Screenshots/6.png?raw=true "Summary")
+### Confirmation
+![](ASSIGNMENT-FILES/Final-Screenshots/6.png?raw=true "Confirmation")
 
+### Success Page
 ![](ASSIGNMENT-FILES/Final-Screenshots/7.png?raw=true "Success")
 
 ## Database Information
