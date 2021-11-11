@@ -1,5 +1,5 @@
 # CIS-Web-Based-Applications-Project--PHP
- CIS - Year 3 - Web-Based Applications Assignment Project.<br />
+ This project was created for the BSc Computer Information Systems module Web Based Applications.<br />
  The project uses HTML, CSS, PHP, MySQL and Bootstrap to deliver a prototype of a storefront. Interfaces with a database to deliver dynamic content.
 ## Project Description
 Notes about this project:
