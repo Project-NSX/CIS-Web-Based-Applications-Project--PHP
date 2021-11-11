@@ -8,8 +8,22 @@ Notes about this project:
 - The "Assignment Submissions" folder contains zip files that contain the required code for each submission. These are essentially snap shots of the code at the time of submission for each assignment.
 - The "Final Project Screenshots" folder contains screenshots of the final application.
 - The "SQL-TABLES-DUMP" folder contains a backup of the SQL tables that are required for the project to run.
+- 
+## Project Screenshots
+Below are screenshots of the final project
+![](ASSIGNMENT-FILES/Final-Screenshots/1.png?raw=true "Home Page")
 
-![Alt text](ASSIGNMENT-FILES/Final-Screenshots/1.png?raw=true "Title")
+![](ASSIGNMENT-FILES/Final-Screenshots/2.png?raw=true "Product Details Page")
+
+![](ASSIGNMENT-FILES/Final-Screenshots/3.png?raw=true "Shopping Basket")
+
+![](ASSIGNMENT-FILES/Final-Screenshots/4.png?raw=true "Login Page")
+
+![](ASSIGNMENT-FILES/Final-Screenshots/5.png?raw=true "Checkout")
+
+![](ASSIGNMENT-FILES/Final-Screenshots/6.png?raw=true "Summary")
+
+![](ASSIGNMENT-FILES/Final-Screenshots/7.png?raw=true "Success")
 
 ## Database Information
 This section contains information regarding the database that was developed as part of this application. I begin with designing the database and then move onto providing the code I used to create the database.
