@@ -55,27 +55,27 @@ $error_message = false;
                 if ($success) 
                 {
                 ?>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="alert alert-success">
-                                <p><?= $success_message ?></p>
-                            </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="alert alert-success">
+                            <p><?= $success_message ?></p>
                         </div>
                     </div>
-                    <?php
+                </div>
+                <?php
                 } 
                 else 
                 {
                     if ($error_message) 
                     {
                     ?>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="alert alert-danger">
-                                    <p><?php echo $error_message ?></p>
-                                </div>
-                            </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="alert alert-danger">
+                            <p><?php echo $error_message ?></p>
                         </div>
+                    </div>
+                </div>
                 <?php
                     }
                 }
@@ -86,7 +86,8 @@ $error_message = false;
                         <label class="col-sm-12 control-label" for="unencryptedText">Text To Encrypt: </label>
                         <div class="col-sm-12">
                             <!--Email-->
-                            <input type="text" class="form-control" name="unencryptedText" id="unencryptedText" placeholder="Type some text to encrypt" maxlength="255" required />
+                            <input type="text" class="form-control" name="unencryptedText" id="unencryptedText"
+                                placeholder="Type some text to encrypt" maxlength="255" required />
                         </div>
                     </div>
                     <div class="col-sm-12">
